@@ -533,7 +533,9 @@ LOCAL_STATIC_LIBRARIES := \
 	libsfntly
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+ifneq ($(FP2_SKIP_QCOM_SKIA),true)
 	LOCAL_WHOLE_STATIC_LIBRARIES += libqc-skia
+endif
 endif
 
 
